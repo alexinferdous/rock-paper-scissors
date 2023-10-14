@@ -1,11 +1,22 @@
-const userSelection2 = prompt("play: ");
-const userSelection = userSelection2.toUpperCase();
+function getUserInput() {
+    const userSelection2 = prompt("play: ");
+    const userSelection3 = userSelection2.toUpperCase();
+    let userSelection4;
 
+    if (userSelection3 === "ROCK" || userSelection3 === "PAPER" || userSelection3 === "SCISSORS") {
+        userSelection4 = userSelection3;
+    } else if (userSelection3 !== "ROCK" && userSelection3 !== "PAPER" && userSelection3 !== "SCISSORS") {
+        alert("Please choose anyone from rock/paper/scissors")
+        const userSelection2 = prompt("play: ");
+        userSelection4 = userSelection2.toUpperCase();
+        
+    }
+    console.log(userSelection4);
+    return userSelection4;
 
-if (userSelection !== "ROCK" && userSelection !== "PAPER" && userSelection !== "SCISSORS") {
-    location.reload();
 }
 
+const userSelection = getUserInput();
 
 function getComputerChoice() {
     const strings = ["ROCK", "PAPER", "SCISSORS"];
