@@ -11,12 +11,9 @@ function getUserInput() {
         userSelection4 = userSelection2.toUpperCase();
         
     }
-    console.log(userSelection4);
     return userSelection4;
 
 }
-
-const userSelection = getUserInput();
 
 function getComputerChoice() {
     const strings = ["ROCK", "PAPER", "SCISSORS"];
@@ -57,9 +54,16 @@ function playRound(playerSelection) {
 }
 
 
-const [op1, op2, op3] = playRound(userSelection);
+
+function fiveRounds() {
+    for (let i=0; i<5; i++) {
+        const userSelection = getUserInput();
+        const [op1, op2, op3] = playRound(userSelection);
+        console.log("You chose: ", op1);
+        console.log("Computer chose: ", op2);
+        console.log("Result: ", op3);
+    }
+}
 
 
-console.log("You chose: ", op1);
-console.log("Computer chose: ", op2);
-console.log("Result: ", op3);
+fiveRounds();
